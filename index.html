@@ -1,10 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>LokRekha</title>
+  <meta charset="UTF-8">
+  <title>LOKREKHA | Cultural Artistry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #f5f5f5;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.8);
+      position: fixed;
+      width: 100%;
+    }
+
+    header h1 {
+      color: #d4af37;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1603575448369-6c3d9d9bfae4') no-repeat center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: #d4af37;
+    }
+
+    .hero p {
+      margin: 20px 0;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: #d4af37;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .about {
+      background: #1a1a1a;
+    }
+
+    .about h2 {
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Welcome to LokRekha</h1>
-  <p>Authentic handmade cultural products</p>
+
+<header>
+  <h1>LOKREKHA</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Collections</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="overlay">
+    <h2>Where Tradition Meets Expression</h2>
+    <p>
+      Discover exquisite hand-painted fabrics inspired by the timeless beauty 
+      of Sohrai and Madhubani art forms.
+    </p>
+    <a href="#" class="btn">Explore Collection</a>
+  </div>
+</div>
+
+<section class="about">
+  <h2>About Lokrekha</h2>
+  <p>
+    LOKREKHA is a celebration of India’s rich artistic heritage. Rooted in the 
+    traditional Sohrai and Madhubani painting styles, each piece reflects 
+    culture, storytelling, and craftsmanship passed through generations.
+    Our mission is to bring these indigenous art forms to contemporary fashion 
+    while preserving their authenticity.
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 LOKREKHA | Crafted with Tradition</p>
+</footer>
+
 </body>
 </html>

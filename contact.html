@@ -5,28 +5,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | LOKREKHA</title>
 
+<link rel="icon" href="f2bfc1cb-bc02-426e-bb88-4d5e946893fd.png">
+
 <style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
 body {
-  font-family: Georgia, serif;
+  font-family: 'Georgia', serif;
   background: #EBBE9B;
   color: #502419;
-  margin: 0;
 }
 
+/* HEADER */
 header {
-  background: #502419;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px 40px;
+  background: #502419;
 }
 
-header h1 {
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 60px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  color: #E7A977;
+  font-size: 22px;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #EBBE9B;
+  transition: 0.3s;
+}
+
+nav a:hover {
   color: #E7A977;
 }
 
-section {
-  padding: 60px 20px;
+/* CONTACT SECTION */
+.contact {
+  padding: 80px 20px;
   text-align: center;
 }
 
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+/* FORM */
 form {
   max-width: 500px;
   margin: auto;
@@ -36,7 +85,7 @@ form {
 }
 
 input, textarea {
-  padding: 10px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
 }
@@ -44,20 +93,68 @@ input, textarea {
 button {
   background: #7EA172;
   color: #502419;
-  padding: 10px;
+  padding: 12px;
   border: none;
+  font-weight: bold;
   cursor: pointer;
 }
+
+button:hover {
+  background: #E7A977;
+}
+
+/* INSTAGRAM */
+.instagram {
+  margin-top: 30px;
+}
+
+.instagram a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #E7A977;
+  color: #502419;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.instagram a:hover {
+  background: #7EA172;
+}
+
+/* FOOTER */
+footer {
+  background: #502419;
+  color: #EBBE9B;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <h1>LOKREKHA</h1>
+  <div class="logo">
+    <img src="f2bfc1cb-bc02-426e-bb88-4d5e946893fd.png" alt="Logo">
+    <h1>LOKREKHA</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Collections</a>
+    <a href="#">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<section>
+<!-- CONTACT -->
+<section class="contact">
+
   <h2>Contact Us</h2>
 
   <form>
@@ -67,7 +164,20 @@ button {
     <button type="submit">Send Message</button>
   </form>
 
+  <!-- INSTAGRAM -->
+  <div class="instagram">
+    <p>Follow us on Instagram</p>
+    <a href="https://instagram.com/lokrekha.in" target="_blank">
+      @lokrekha.in
+    </a>
+  </div>
+
 </section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 LOKREKHA | Crafted with Tradition</p>
+</footer>
 
 </body>
 </html>

@@ -70,107 +70,22 @@ header {
 }
 
 /* LOGO */
-<style>
-
-/* your existing CSS */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .logo img {
-  height: 60px;
-  width: auto;
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
-.hero img {
-  height: 120px;
-  width: auto;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-</style>
-
-/* NAV */
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #EBBE9B;
-  transition: 0.3s;
-}
-
-nav a:hover {
+.logo h1 {
+  font-size: 22px;
   color: #E7A977;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(80,36,25,0.7), rgba(80,36,25,0.7)),
-              url('') center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 700px;
-}
-
-.hero img {
-  height: 90px;
-  margin-bottom: 20px;
-  border-radius: 50%;
-}
-
-.hero h2 {
-  font-size: 2.8rem;
-  color: #E7A977;
-}
-
-.hero p {
-  margin: 15px 0;
-  color: #EBBE9B;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #7EA172;
-  color: #502419;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #E7A977;
-}
-
-/* ABOUT */
-.about {
-  padding: 60px 20px;
-  text-align: center;
-  background: #7EA172;
-}
-
-.about h2 {
-  margin-bottom: 20px;
-  color: #502419;
-}
-
-.about p {
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.6;
-}
-
-/* FOOTER */
-footer {
-  background: #502419;
-  color: #EBBE9B;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
 }
 </style>
 </head>

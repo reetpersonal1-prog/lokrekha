@@ -15,7 +15,44 @@
   padding: 0;
   box-sizing: border-box;
 }
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  background: #EBBE9B;
+}
 
+.contact h2 {
+  margin-bottom: 20px;
+  color: #502419;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #7EA172;
+  color: #502419;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact button:hover {
+  background: #E7A977;
+}
 /* BODY */
 body {
   font-family: 'Georgia', serif;
@@ -178,6 +215,27 @@ footer {
     culture, storytelling, and craftsmanship passed through generations.
   </p>
 </section>
+  <section class="about">...</section>
+
+<!-- ADD CONTACT HERE -->
+
+<section class="contact">
+  <h2>Contact Us</h2>
+
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    
+    <input type="text" name="name" placeholder="Your Name" required>
+    
+    <input type="email" name="email" placeholder="Your Email" required>
+    
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    
+    <button type="submit">Send Message</button>
+  
+  </form>
+</section>
+
+<footer>...</footer>
 
 <!-- FOOTER -->
 <footer>

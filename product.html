@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product | LOKREKHA</title>
 
+<style>
+body {
+  font-family: Georgia;
+  background: #EBBE9B;
+  color: #502419;
+  margin: 0;
+}
+
+.container {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+img {
+  width: 320px;
+  border-radius: 10px;
+}
+
+.details {
+  max-width: 400px;
+}
+
+.price {
+  font-size: 24px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #7EA172;
+  color: #502419;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #E7A977;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <img id="productImg">
+
+  <div class="details">
+    <h2 id="productName"></h2>
+
+    <p id="productDesc"></p>
+
+    <div class="price" id="productPrice"></div>
+
+    <a href="https://wa.me/919876543210" class="btn">Order on WhatsApp</a>
+  </div>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("productName").innerText = params.get("name");
+document.getElementById("productPrice").innerText = "₹" + params.get("price");
+document.getElementById("productImg").src = params.get("img");
+document.getElementById("productDesc").innerText = params.get("desc");
+</script>
+
+</body>
+</html>

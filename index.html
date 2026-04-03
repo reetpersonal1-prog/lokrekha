@@ -16,9 +16,8 @@
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   background: #EBBE9B;
   color: #502419;
 }
@@ -28,18 +27,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 50px;
+  padding: 15px 40px;
   background: #502419;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* LOGO */
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .logo img {
@@ -49,20 +47,17 @@ header {
 
 .logo h1 {
   color: #E7A977;
-  font-size: 24px;
-  letter-spacing: 1px;
 }
 
 /* NAV */
 nav {
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 nav a {
   text-decoration: none;
   color: #EBBE9B;
-  font-size: 15px;
   position: relative;
 }
 
@@ -81,6 +76,14 @@ nav a:hover::after {
   width: 100%;
 }
 
+/* MENU BUTTON */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #EBBE9B;
+  cursor: pointer;
+}
+
 /* HERO */
 .hero {
   height: 100vh;
@@ -92,35 +95,28 @@ nav a:hover::after {
               url('https://images.unsplash.com/photo-1603575448369-6c3d9d9bfae4') center/cover;
 }
 
-.hero-content {
-  max-width: 700px;
-}
-
-.hero img {
-  height: 140px;
-  border-radius: 50%;
+.hero-content img {
+  height: 130px;
   margin-bottom: 20px;
+  border-radius: 50%;
 }
 
 .hero h2 {
-  font-size: 3rem;
   color: #E7A977;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
 }
 
 .hero p {
   color: #EBBE9B;
-  margin-bottom: 25px;
-  line-height: 1.6;
+  margin: 15px 0;
 }
 
 .btn {
-  padding: 12px 28px;
+  padding: 12px 25px;
   background: #7EA172;
   color: #502419;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
 }
 
 .btn:hover {
@@ -129,19 +125,14 @@ nav a:hover::after {
 
 /* COLLECTIONS */
 .collections {
-  padding: 90px 40px;
+  padding: 80px 20px;
   text-align: center;
-}
-
-.collections h2 {
-  margin-bottom: 40px;
-  font-size: 2rem;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  gap: 20px;
 }
 
 .gallery img {
@@ -158,57 +149,36 @@ nav a:hover::after {
 
 /* ABOUT */
 .about {
-  padding: 90px 40px;
+  padding: 80px 20px;
   background: #7EA172;
   text-align: center;
 }
 
-.about h2 {
-  margin-bottom: 20px;
-}
-
-.about p {
-  max-width: 750px;
-  margin: auto;
-  line-height: 1.7;
-}
-
 /* CONTACT */
 .contact {
-  padding: 90px 40px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.contact h2 {
-  margin-bottom: 20px;
-}
-
-.contact form {
+form {
   max-width: 500px;
-  margin: 30px auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.contact input,
-.contact textarea {
+input, textarea {
   padding: 12px;
-  border: none;
   border-radius: 5px;
+  border: none;
 }
 
-.contact button {
+button {
   background: #7EA172;
-  color: #502419;
   padding: 12px;
   border: none;
-  font-weight: bold;
   cursor: pointer;
-}
-
-.contact button:hover {
-  background: #E7A977;
 }
 
 /* FOOTER */
@@ -219,44 +189,60 @@ footer {
   padding: 20px;
 }
 
+/* MOBILE MENU */
+@media (max-width: 768px) {
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    background: #502419;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 15px;
+    border-top: 1px solid #7EA172;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-
   <div class="logo">
     <img src="f2bfc1cb-bc02-426e-bb88-4d5e946893fd.png">
     <h1>LOKREKHA</h1>
   </div>
 
-  <!-- MENU BUTTON -->
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-  <!-- NAV -->
   <nav id="navMenu">
     <a href="#">Home</a>
     <a href="#collections">Collections</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
-
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <img src="f2bfc1cb-bc02-426e-bb88-4d5e946893fd.png">
-
     <h2>Where Tradition Meets Soul</h2>
-
-    <p>
-      Discover exquisite hand-painted fabrics inspired by the timeless beauty 
-      of Sohrai and Madhubani art forms.
-    </p>
-
+    <p>Hand-painted heritage inspired by Sohrai & Madhubani art.</p>
     <a href="#collections" class="btn">Explore Collection</a>
   </div>
 </section>
@@ -267,13 +253,13 @@ footer {
 
   <div class="gallery">
 
-  <a href="product.html?name=Hand Painted Bandi - Forest Hunting&price=2499&img=IMG3567.PNG&desc=Traditional Sohrai artwork showing forest hunting scenes painted by hand.">
-    <img src="IMG_3567.PNG">
-  </a>
+    <a href="product.html?name=Forest Hunting Bandi&price=2499&img=IMG_3567.PNG&desc=Hand painted forest hunting design.">
+      <img src="IMG_3567.PNG">
+    </a>
 
-  <a href="product.html?name=Hand Painted Bandi - Wedding Doli&price=2599&img=IMG3566.PNG&desc=Beautiful Sohrai-inspired bandi showing marriage procession and doli celebration.">
-    <img src="IMG_3566.PNG">
-  </a>
+    <a href="product.html?name=Wedding Doli Bandi&price=2599&img=IMG_3566.PNG&desc=Marriage procession artwork.">
+      <img src="IMG_3566.PNG">
+    </a>
 
   </div>
 </section>
@@ -281,11 +267,7 @@ footer {
 <!-- ABOUT -->
 <section class="about" id="about">
   <h2>About Lokrekha</h2>
-
-  <p>
-    LOKREKHA celebrates India’s rich artistic heritage through Sohrai and Madhubani 
-    art. Each creation reflects culture, storytelling, and timeless craftsmanship.
-  </p>
+  <p>Celebrating traditional Indian art through handcrafted wearable designs.</p>
 </section>
 
 <!-- CONTACT -->
@@ -299,28 +281,20 @@ footer {
     <button type="submit">Send Message</button>
   </form>
 
-  <p style="margin-top:20px;">
-    Follow us on Instagram:
-    <a href="https://instagram.com/lokrekha.in" target="_blank" style="color:#502419; font-weight:bold;">
-      @lokrekha.in
-    </a>
+  <p>Follow us:
+    <a href="https://instagram.com/lokrekha.in" target="_blank">@lokrekha.in</a>
   </p>
-
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 LOKREKHA | Crafted with Tradition</p>
+  <p>© 2026 LOKREKHA</p>
 </footer>
+
 <script>
 function toggleMenu() {
-  var menu = document.getElementById("navMenu");
-  if (menu.style.display === "flex") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "flex";
-  }
+  document.getElementById("navMenu").classList.toggle("active");
 }
 </script>
+
 </body>
 </html>
